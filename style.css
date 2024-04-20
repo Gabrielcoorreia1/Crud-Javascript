@@ -1,0 +1,163 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(141, 194, 194);
+}
+
+#pessoas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+ 
+}
+
+.container {
+    padding: 1rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.pessoas-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 10px 5px 5px rgb(44, 31, 31);
+    background-color: rgb(64, 119, 119);
+}
+
+#form-pessoa {
+    padding: 1rem;
+    width: 100%;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.inputs > label {
+    font-size: 20px;
+}
+
+.inputs > input[type="text"],
+.inputs > input[type="number"],
+.inputs > input[type="email"] {
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 25%;
+    padding: 5px;
+    border: 2px solid black;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(55, 97, 117);
+}
+
+#tabela-crud {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    
+}
+
+.tabela {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.tabela caption {
+    font-size: 25px;
+}
+
+.tabela th {
+    padding: 10px 15px;
+}
+
+tr {
+    color: aliceblue;
+}
+
+#pessoa-lista td {
+    padding: 0 5px;
+    background-color: rgba(15, 22, 36, 0.486);
+}
+
+td a {
+    display: block;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+@media(max-width: 767px) {
+
+    .container {
+        width: 100%;
+        padding: 0 20px;
+      }
+    
+     .pessoas-container {
+        width: 100%;
+        padding: 10px 20px;
+      }
+    
+     .inputs {
+        width: 100%;
+      }
+    
+     .tabela {
+        width: 100%;
+      }
+
+
+
+
+    thead {
+        display: none;
+    }
+    td {
+        display: block;
+    }
+
+    td:last-child {
+        display: flex;
+    }
+
+    td:last-child a {
+        padding-left: 5px;
+    }
+
+    td::before {
+        content: attr(data) ": ";
+        font-weight: bold;
+        color: black;
+    }
+}
